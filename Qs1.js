@@ -1,12 +1,13 @@
 // Positive or Negative number
-let n = -1;
-if (n === 0) {
-    console.log("number is zero");
-} else if (n > 0) {
-    console.log("number is positive");
-} else {
-    console.log("number is negative");
-}
+// let n = -1;
+// if (n === 0) {
+//     console.log("number is zero");
+// } else if (n > 0) {
+//     console.log("number is positive");
+// } else {
+//     console.log("number is negative");
+// }
+
 
 // Even or Odd number:
 // let num=2;
@@ -17,6 +18,8 @@ if (n === 0) {
 //         console.log("num is odd")
 //     }
 
+
+
 // Sum of N Natural numbers:     
 // let n=6;
 // let sum=0;
@@ -25,12 +28,16 @@ if (n === 0) {
 // }
 // console.log(sum)
 
+
+
 // Sum of N Natural numbers:(2nd method)     
 // function Natural(n) {
 //     return n * (n + 1) / 2;
 // }
 // let n = 5;
 // console.log(Natural(n));
+
+
 
 // Sum of numbers in a given range:
 // let n=10;
@@ -40,11 +47,12 @@ if (n === 0) {
 // }
 // console.log(sum);
 
-// Greatest of two numbers:
+
+
+// Greatest of three numbers:
 // let a = 150;
 // let b = 160;
 // let c = 160;
-
 // if (a > b && a > c) {
 //     console.log("a is greater");
 // } 
@@ -92,23 +100,52 @@ if (n === 0) {
 //     console.log("not a prime")
 // }
 
+
+
+
 // Prime number within a given range
-let num=5;
-let prime=[];
-for(let i=1;i<=num;i++){
-    let count=0;
+// let num=5;
+// let prime=[];
+// for(let i=1;i<=num;i++){
+//     let count=0;
+// for(let j=1;j<=i;j++){
+//     if(i%j==0){
+//         count++;
+//     }
+// }
+// if(count==2){
+//     prime.push(i)
+// }
+// }
+// console.log(prime);
 
-for(let j=1;j<=i;j++){
-    if(i%j==0){
-        count++;
-    }
-}
-if(count==2){
-    prime.push(i)
-}
-}
 
-console.log(prime);
+
+// Prime number within a given range
+// function Find(n) {
+//     let prime = [];
+
+//     for (let i = 1; i <= n; i++) {
+//         let count = 0;
+
+//         for (let j = 1; j <= i; j++) {
+//             if (i % j === 0) {
+//                 count++;
+//             }
+//         }
+
+//         if (count === 2) {
+//             prime.push(i);
+//         }
+//     }
+
+//     return prime;
+// }
+
+// let num = 10;
+// console.log("Prime numbers up to", num + ":", Find(num));
+
+
 
 // Sum of digits of a number:
 // let n=1234;
@@ -130,3 +167,135 @@ console.log(prime);
 //     n=parseInt(n/10)
 // }
 // console.log(rev);
+
+
+
+
+// Palindrome number
+// let n = 1221;
+// let temp = n;
+// let rev = 0;
+// while (n > 0) {
+//     let rem = n % 10;
+//     rev = rev * 10 + rem;
+//     n = parseInt(n / 10);
+// }
+// if (rev === temp) {
+//     console.log("Palindrome");
+// } else {
+//     console.log("Not a palindrome");
+// }
+
+
+
+
+// let n = 121;
+// let temp = n;       
+// let rev = "";
+// while (n > 0) {
+//     let rem = n % 10;
+//     rev+=rem;
+//     n = parseInt(n / 10);
+// }
+// console.log(rev)
+// if (rev ===temp.toString()) {
+//     console.log("Palindrome");
+// } else {
+//     console.log("Not a Palindrome");
+// }
+
+
+
+// Armstrong number :
+// let num = 54748;
+// let temp = num;
+// let sum = 0;
+
+// let digits = num.toString().length;
+
+// while (num > 0) {
+//     let rem = num % 10;
+//     sum += rem ** digits;
+//     num = parseInt(num / 10);
+// }
+
+// if (temp === sum) {
+//     console.log("Armstrong");
+// } else {
+//     console.log("Not an Armstrong number");
+// }
+
+
+
+
+// Armstrong number in a given range :
+// let n = 2000;
+// let arm = [];
+
+// for (let i = 1; i <= n; i++) {
+//     let sum = 0;
+//     let temp = i;
+//     let digits = i.toString().length;
+
+//     while (temp > 0) {
+//         let rem = temp % 10;
+//         sum += rem ** digits;
+//         temp = parseInt(temp / 10);
+//     }
+
+//     if (sum === i) {
+//         arm.push(i);
+//     }
+// }
+
+// console.log(arm);
+
+
+
+
+
+// Fibonacci Series up to n Terms
+
+// let n = 20;           
+// let pre = 0;
+// let cur = 1;
+
+// console.log(pre);     
+// console.log(cur);     
+
+// for (let i = 3; i <= n; i++) {
+//     let new1 = pre + cur;
+//     console.log(new1);
+//     pre = cur;
+//     cur = new1;
+// }
+
+
+
+
+// Fibonacci Series Less Than a Given Number (n)
+
+let n = 20;
+let pre = 0;
+let cur = 1;
+
+console.log(pre);
+console.log(cur);
+
+let new1 = pre + cur;
+
+while (new1 < n) {
+    console.log(new1);
+    pre = cur;
+    cur = new1;
+    new1 = pre + cur;
+}
+
+
+// Factorial of a number
+// let n=4;
+// let fact=1;
+// for(let i=1;i<=n;i++){
+//     fact = fact*i;
+// }
+// console.log("Factorial of the number is:",fact);
