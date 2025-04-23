@@ -275,21 +275,21 @@
 
 // Fibonacci Series Less Than a Given Number (n)
 
-let n = 20;
-let pre = 0;
-let cur = 1;
+// let n = 20;
+// let pre = 0;
+// let cur = 1;
 
-console.log(pre);
-console.log(cur);
+// console.log(pre);
+// console.log(cur);
 
-let new1 = pre + cur;
+// let new1 = pre + cur;
 
-while (new1 < n) {
-    console.log(new1);
-    pre = cur;
-    cur = new1;
-    new1 = pre + cur;
-}
+// while (new1 < n) {
+//     console.log(new1);
+//     pre = cur;
+//     cur = new1;
+//     new1 = pre + cur;
+// }
 
 
 // Factorial of a number
@@ -299,3 +299,70 @@ while (new1 < n) {
 //     fact = fact*i;
 // }
 // console.log("Factorial of the number is:",fact);
+
+
+
+// Power of a number :
+// let n=2;
+// let power=3;
+// result=n**power;
+// console.log(result);
+
+
+
+// Factor of a number :
+// let n=12;
+// for (let i = 1; i <n; i++) {
+//     if (n % i === 0) {
+//         console.log(i);
+//     }
+// }
+
+
+
+// Finding Prime Factors of a number :
+let n = 15;
+
+for (let i = 2; i <= n; i++) {
+    if (n % i === 0) {
+        let isPrime = true;
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(i);
+        }
+    }
+}
+
+
+
+// 2nd method:
+let num1 = 12;
+let fact = [];
+
+for (let i = 1; i <= num1; i++) {
+    if (num1 % i === 0) {
+        fact.push(i);
+    }
+}
+console.log("All factors:", fact);
+
+console.log("Prime factors:");
+for (let i = 0; i < fact.length; i++) {
+    let value = fact[i];
+    let count = 0;
+
+    for (let j = 1; j <= value; j++) {
+        if (value % j === 0) {
+            count++;
+        }
+    }
+
+    if (count === 2) {
+        console.log(value);
+    }
+}
