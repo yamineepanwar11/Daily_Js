@@ -321,48 +321,95 @@
 
 
 // Finding Prime Factors of a number :
-let n = 15;
+// let n = 15;
 
-for (let i = 2; i <= n; i++) {
-    if (n % i === 0) {
-        let isPrime = true;
-        for (let j = 2; j < i; j++) {
-            if (i % j === 0) {
-                isPrime = false;
-                break;
-            }
-        }
-        if (isPrime) {
-            console.log(i);
-        }
-    }
-}
+// for (let i = 2; i <= n; i++) {
+//     if (n % i === 0) {
+//         let isPrime = true;
+//         for (let j = 2; j < i; j++) {
+//             if (i % j === 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//         }
+//         if (isPrime) {
+//             console.log(i);
+//         }
+//     }
+// }
 
 
 
 // 2nd method:
-let num1 = 12;
-let fact = [];
+// let num1 = 12;
+// let fact = [];
 
-for (let i = 1; i <= num1; i++) {
-    if (num1 % i === 0) {
-        fact.push(i);
+// for (let i = 1; i <= num1; i++) {
+//     if (num1 % i === 0) {
+//         fact.push(i);
+//     }
+// }
+// console.log("All factors:", fact);
+
+// console.log("Prime factors:");
+// for (let i = 0; i < fact.length; i++) {
+//     let value = fact[i];
+//     let count = 0;
+
+//     for (let j = 1; j <= value; j++) {
+//         if (value % j === 0) {
+//             count++;
+//         }
+//     }
+
+//     if (count === 2) {
+//         console.log(value);
+//     }
+// }
+
+
+
+// Strong number :
+let n=123;
+let temp=n;
+let sum=0;
+
+while(temp>0){
+    let digit=temp%10;
+    let fact=1;
+    for(let i=1;i<=digit;i++){
+        fact=fact*i;
+    }
+    sum=sum+fact;
+    temp=parseInt(temp/10);
+}
+console.log("sum of factorial of its digit",sum)
+
+if(sum===n){
+    console.log(n,"is a strong number");
+}
+else{
+    console.log(n,"is not a strong number")
+}
+
+
+
+// Perfect number : 
+
+let num=6;
+let sum1=0;
+for(let i=1;i<num;i++){
+    if(num%i===0){
+        sum1=sum1+i;
     }
 }
-console.log("All factors:", fact);
-
-console.log("Prime factors:");
-for (let i = 0; i < fact.length; i++) {
-    let value = fact[i];
-    let count = 0;
-
-    for (let j = 1; j <= value; j++) {
-        if (value % j === 0) {
-            count++;
-        }
-    }
-
-    if (count === 2) {
-        console.log(value);
-    }
+if(sum1==num){
+    console.log("perfect number");
 }
+else{
+    console.log("Not a perfect number");
+}
+
+
+
+// perfect square:
